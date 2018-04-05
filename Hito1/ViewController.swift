@@ -11,7 +11,13 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var txtfUsuario:UITextField?
     @IBOutlet var txtfContraseña:UITextField?
+    @IBOutlet var txtfUser:UITextField?
+    @IBOutlet var txtfPass:UITextField?
+    @IBOutlet var txtfPasscon:UITextField?
+    @IBOutlet var txtfemail:UITextField?
     @IBOutlet var buttonLogear:UIButton?
+    @IBOutlet var buttonaceptar:UIButton?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,6 +34,18 @@ class ViewController: UIViewController {
         if txtfUsuario?.text=="Kiran" &&  txtfContraseña?.text=="1234" {
             self.performSegue(withIdentifier: "entrar", sender: self)
         }
+    
+   
+        
+    }
+    
+    @IBAction func accionbuttonregistro(){
+        if !((txtfUser?.text?.isEmpty)!) && !((txtfPass?.text?.isEmpty)!) && !((txtfPasscon?.text?.isEmpty)!) && !((txtfemail?.text?.isEmpty)!) && txtfPasscon?.text == txtfPass?.text{
+            self.performSegue(withIdentifier: "Aceptar", sender: self)
+        }
+        
+       
+        
     }
 }
 
