@@ -13,6 +13,8 @@
 		2AA312C020751E8200C46165 /* Hito1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AA312BE20751E8200C46165 /* Hito1.xcdatamodeld */; };
 		2AA312C220751E8200C46165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA312C120751E8200C46165 /* Assets.xcassets */; };
 		2AA312C520751E8200C46165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA312C320751E8200C46165 /* LaunchScreen.storyboard */; };
+		2AA312CF2076083600C46165 /* MiTabla1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA312CE2076083600C46165 /* MiTabla1.swift */; };
+		2AA312D12076110700C46165 /* micelda1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA312D02076110700C46165 /* micelda1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2AA312C120751E8200C46165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AA312C420751E8200C46165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AA312C620751E8200C46165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AA312CE2076083600C46165 /* MiTabla1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiTabla1.swift; sourceTree = "<group>"; };
+		2AA312D02076110700C46165 /* micelda1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = micelda1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				2AA312C320751E8200C46165 /* LaunchScreen.storyboard */,
 				2AA312C620751E8200C46165 /* Info.plist */,
 				2AA312BE20751E8200C46165 /* Hito1.xcdatamodeld */,
+				2AA312CE2076083600C46165 /* MiTabla1.swift */,
+				2AA312D02076110700C46165 /* micelda1.swift */,
 			);
 			path = Hito1;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA312CF2076083600C46165 /* MiTabla1.swift in Sources */,
+				2AA312D12076110700C46165 /* micelda1.swift in Sources */,
 				2AA312BA20751E8200C46165 /* ViewController.swift in Sources */,
 				2AA312B820751E8200C46165 /* AppDelegate.swift in Sources */,
 				2AA312C020751E8200C46165 /* Hito1.xcdatamodeld in Sources */,
@@ -279,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86CZ52Y2CQ;
 				INFOPLIST_FILE = Hito1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BarriSA.Hito1;
@@ -293,6 +302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86CZ52Y2CQ;
 				INFOPLIST_FILE = Hito1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BarriSA.Hito1;

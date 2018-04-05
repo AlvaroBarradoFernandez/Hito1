@@ -8,8 +8,11 @@
 
 import UIKit
 
-class micelda1: UITableViewCell {
 
+
+class micelda1: UITableViewCell {
+@IBOutlet var miLabel:UILabel?
+@IBOutlet var miImagen:UIImageView?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
