@@ -24,6 +24,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        txtfUser?.text = DataHolder.sharedInstance.sNick
+        txtfUser?.text = DataHolder.sharedInstance.sNick
+        DataHolder.sharedInstance.sNick = "Nacho"
+        txtfPass?.text = DataHolder.sharedInstance.sNick
+        /*
+        do {
+          try Auth.auth().signOut()
+        }catch{
+            
+        }
+        */
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user != nil{
+               // self.performSegue(withIdentifier: "entrar", sender: self)
+            }
+        }
         
         
     }
@@ -39,8 +54,6 @@ class ViewController: UIViewController {
         if txtfUsuario?.text=="Kiran" &&  txtfContraseña?.text=="1234" {
             self.performSegue(withIdentifier: "entrar", sender: self)
         }
-    
-   
         
     }
     
