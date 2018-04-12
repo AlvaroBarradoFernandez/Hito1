@@ -15,9 +15,14 @@
 		2AA312C520751E8200C46165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA312C320751E8200C46165 /* LaunchScreen.storyboard */; };
 		2AA312CF2076083600C46165 /* MiTabla1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA312CE2076083600C46165 /* MiTabla1.swift */; };
 		2AA312D12076110700C46165 /* micelda1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA312D02076110700C46165 /* micelda1.swift */; };
+		2AF35EAA207CDD6200695453 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */; };
+		2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35EAB207CE1B000695453 /* DataHolder.swift */; };
+		85490108B7822CF417BD46BA /* Pods_Hito1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27324900B0BE3CB5AAE0B826 /* Pods_Hito1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00699A5A0D82EBE80ACD9D85 /* Pods-Hito1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hito1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hito1/Pods-Hito1.release.xcconfig"; sourceTree = "<group>"; };
+		27324900B0BE3CB5AAE0B826 /* Pods_Hito1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hito1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA312B420751E8200C46165 /* Hito1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hito1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA312B720751E8200C46165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA312B920751E8200C46165 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +33,9 @@
 		2AA312C620751E8200C46165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AA312CE2076083600C46165 /* MiTabla1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiTabla1.swift; sourceTree = "<group>"; };
 		2AA312D02076110700C46165 /* micelda1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = micelda1.swift; sourceTree = "<group>"; };
+		2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2AF35EAB207CE1B000695453 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
+		3AE98A418DE94A0823573824 /* Pods-Hito1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hito1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hito1/Pods-Hito1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85490108B7822CF417BD46BA /* Pods_Hito1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +55,8 @@
 			children = (
 				2AA312B620751E8200C46165 /* Hito1 */,
 				2AA312B520751E8200C46165 /* Products */,
+				CF2A67FA1FD29D7C3C0D4A81 /* Pods */,
+				A41DE56A5A3422A3DF4AF5E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,9 +71,11 @@
 		2AA312B620751E8200C46165 /* Hito1 */ = {
 			isa = PBXGroup;
 			children = (
+				2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */,
 				2AA312B720751E8200C46165 /* AppDelegate.swift */,
 				2AA312B920751E8200C46165 /* ViewController.swift */,
 				2AA312BB20751E8200C46165 /* Main.storyboard */,
+				2AF35EAB207CE1B000695453 /* DataHolder.swift */,
 				2AA312C120751E8200C46165 /* Assets.xcassets */,
 				2AA312C320751E8200C46165 /* LaunchScreen.storyboard */,
 				2AA312C620751E8200C46165 /* Info.plist */,
@@ -73,6 +86,23 @@
 			path = Hito1;
 			sourceTree = "<group>";
 		};
+		A41DE56A5A3422A3DF4AF5E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27324900B0BE3CB5AAE0B826 /* Pods_Hito1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF2A67FA1FD29D7C3C0D4A81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AE98A418DE94A0823573824 /* Pods-Hito1.debug.xcconfig */,
+				00699A5A0D82EBE80ACD9D85 /* Pods-Hito1.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AA312C920751E8200C46165 /* Build configuration list for PBXNativeTarget "Hito1" */;
 			buildPhases = (
+				3D019506276875E6E7A25C72 /* [CP] Check Pods Manifest.lock */,
 				2AA312B020751E8100C46165 /* Sources */,
 				2AA312B120751E8100C46165 /* Frameworks */,
 				2AA312B220751E8100C46165 /* Resources */,
+				47B047A63685E577D9724EE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,11 +166,69 @@
 			files = (
 				2AA312C520751E8200C46165 /* LaunchScreen.storyboard in Resources */,
 				2AA312C220751E8200C46165 /* Assets.xcassets in Resources */,
+				2AF35EAA207CDD6200695453 /* GoogleService-Info.plist in Resources */,
 				2AA312BD20751E8200C46165 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D019506276875E6E7A25C72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hito1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47B047A63685E577D9724EE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hito1/Pods-Hito1-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hito1/Pods-Hito1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2AA312B020751E8100C46165 /* Sources */ = {
@@ -146,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA312CF2076083600C46165 /* MiTabla1.swift in Sources */,
+				2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */,
 				2AA312D12076110700C46165 /* micelda1.swift in Sources */,
 				2AA312BA20751E8200C46165 /* ViewController.swift in Sources */,
 				2AA312B820751E8200C46165 /* AppDelegate.swift in Sources */,
@@ -284,6 +375,7 @@
 		};
 		2AA312CA20751E8200C46165 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AE98A418DE94A0823573824 /* Pods-Hito1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +391,7 @@
 		};
 		2AA312CB20751E8200C46165 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00699A5A0D82EBE80ACD9D85 /* Pods-Hito1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

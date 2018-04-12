@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class ViewController: UIViewController {
     @IBOutlet var txtfUsuario:UITextField?
@@ -21,6 +23,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+//        txtfUser?.text = DataHolder.sharedInstance.sNick
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,13 +44,47 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func accionbuttonregistro(){
-        if !((txtfUser?.text?.isEmpty)!) && !((txtfPass?.text?.isEmpty)!) && !((txtfPasscon?.text?.isEmpty)!) && !((txtfemail?.text?.isEmpty)!) && txtfPasscon?.text == txtfPass?.text{
-            self.performSegue(withIdentifier: "Aceptar", sender: self)
+    @IBAction func clickRegistrar(){
+        Auth.auth().createUser(withEmail: (txtfemail?.text)!, password: (txtfPass?.text)!) {(user, error) in
+        if (user != nil){
+            print("Te registraste")
+            // Add a new document with a generated ID
+                DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").document((user?.uid)!).setData([
+                    "first": self.txtfUser?.text,
+                "last": "Lovelace",
+                "born": 1815
+            ]) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: ")
+                }
+            }
         }
+        else{
+            print("No se ha creado")
+            print(error!)
+        }
+        }
+    }
+    
+    
+    @IBAction func accionbuttonregistro(){
+//        if !((txtfUser?.text?.isEmpty)!) && !((txtfPass?.text?.isEmpty)!) && !((txtfPasscon?.text?.isEmpty)!) && !((txtfemail?.text?.isEmpty)!) && txtfPasscon?.text == txtfPass?.text{
+//            self.performSegue(withIdentifier: "Aceptar", sender: self)
+//        }
         
-       
-        
+        Auth.auth().signIn(withEmail: (txtfUser?.text)!, password: (txtfPass?.text)!){(user, error) in
+            if user != nil{
+                let refPerfil = DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").document((user?.uid)!)
+                refPerfil?.getDocument { (document, error) in
+                    if document != nil {
+                        print(document?.data())
+                    }
+                    
+                }
+            }
+        }
     }
 }
 

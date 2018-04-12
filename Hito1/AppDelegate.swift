@@ -5,7 +5,7 @@
 //  Created by Alvaro Barrado on 4/4/18.
 //  Copyright © 2018 Alvaro Barrado. All rights reserved.
 //
-
+import Firebase
 import UIKit
 import CoreData
 
@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        DataHolder.sharedInstance.initFireBase()
         // Override point for customization after application launch.
         return true
     }

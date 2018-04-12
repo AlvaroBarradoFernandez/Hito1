@@ -80,7 +80,6 @@
         <!--Objeto 1-->
         <scene sceneID="5Dg-iT-vuj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vua-VN-Dve" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="K5G-P9-9MX" customClass="MiTabla1" customModule="Hito1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fdH-Ou-4l0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -128,6 +127,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Objeto 1" id="AUD-PK-bd8"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vua-VN-Dve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1820" y="373.76311844077964"/>
         </scene>
@@ -250,6 +250,7 @@
                                 <state key="normal" title="Aceptar"/>
                                 <connections>
                                     <action selector="accionbuttonregistro" destination="Z7V-YZ-ERT" eventType="touchUpInside" id="lSv-n7-sEh"/>
+                                    <action selector="clickRegistrar" destination="Z7V-YZ-ERT" eventType="touchUpInside" id="iZ3-2G-hlE"/>
                                 </connections>
                             </button>
                         </subviews>
