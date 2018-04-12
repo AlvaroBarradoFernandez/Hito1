@@ -13,7 +13,7 @@ class DataHolder: NSObject {
     static let sharedInstance:DataHolder = DataHolder()
     var sNick:String = "Yony"
     var firestoreDB:Firestore?
-    
+    var miPerfil:Perfil = Perfil()
     func initFireBase(){
         FirebaseApp.configure()
         firestoreDB = Firestore.firestore()

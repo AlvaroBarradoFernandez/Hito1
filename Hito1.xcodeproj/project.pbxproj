@@ -17,6 +17,7 @@
 		2AA312D12076110700C46165 /* micelda1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA312D02076110700C46165 /* micelda1.swift */; };
 		2AF35EAA207CDD6200695453 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */; };
 		2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35EAB207CE1B000695453 /* DataHolder.swift */; };
+		2AF35EAE207F88DA00695453 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35EAD207F88DA00695453 /* Perfil.swift */; };
 		85490108B7822CF417BD46BA /* Pods_Hito1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27324900B0BE3CB5AAE0B826 /* Pods_Hito1.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		2AA312D02076110700C46165 /* micelda1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = micelda1.swift; sourceTree = "<group>"; };
 		2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AF35EAB207CE1B000695453 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
+		2AF35EAD207F88DA00695453 /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
 		3AE98A418DE94A0823573824 /* Pods-Hito1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hito1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hito1/Pods-Hito1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				2AA312BE20751E8200C46165 /* Hito1.xcdatamodeld */,
 				2AA312CE2076083600C46165 /* MiTabla1.swift */,
 				2AA312D02076110700C46165 /* micelda1.swift */,
+				2AF35EAD207F88DA00695453 /* Perfil.swift */,
 			);
 			path = Hito1;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA312CF2076083600C46165 /* MiTabla1.swift in Sources */,
+				2AF35EAE207F88DA00695453 /* Perfil.swift in Sources */,
 				2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */,
 				2AA312D12076110700C46165 /* micelda1.swift in Sources */,
 				2AA312BA20751E8200C46165 /* ViewController.swift in Sources */,
