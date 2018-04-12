@@ -51,8 +51,8 @@ class ViewController: UIViewController {
             // Add a new document with a generated ID
                 DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").document((user?.uid)!).setData([
                     "first": self.txtfUser?.text,
-                "last": "Lovelace",
-                "born": 1815
+                "pass": self.txtfPass?.text,
+                "email": self.txtfemail?.text
             ]) { err in
                 if let err = err {
                     print("Error adding document: \(err)")
