@@ -59,15 +59,28 @@ class ViewController: UIViewController {
         }
     */
  // Lo comento porque da error ARREGLAR PARA QUE PUEDAS INICIAR SESIÓN CON UN USUARIO NUEVO QUE SE HA REGISTRADO
-        Auth.auth().signIn(withEmail: (txtfemail?.text)!, password: (txtfPass?.text)! { (user, error) in
-            if let user = user {
-                // The user's ID, unique to the Firebase project.
-                // Do NOT use this value to authenticate with your backend server,
-                // if you have one. Use getTokenWithCompletion:completion: instead.
-                let uid = user.uid
-                let email = user.email
+        
+        print(txtfUsuario?.text)
+        print(txtfContraseña?.text)
+        Auth.auth().signIn(withEmail: (txtfUsuario?.text)!, password: (txtfContraseña?.text)!) { (user, error) in
+            if (user != nil){
+                let refPerfil =
+                DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").document ((user?.uid)!)
+                refPerfil?.getDocument{(document, error) in if document != nil{
+                    DataHolder.sharedInstance.miPerfil.setMap(valores:(document?.data())!)
+                    print(DataHolder.sharedInstance.miPerfil.sFirst!)
+                    self.performSegue(withIdentifier: "entrar", sender: self)
+                
+                
+                //self.performSegue(withIdentifier: "entrar", sender: self)
             }
-        });
+            else{
+                print(error!)
+            }
+            
+        }
+    }
+        }
     }
     @IBAction func clickRegistrar(){
         Auth.auth().createUser(withEmail: (txtfemail?.text)!, password: (txtfPass?.text)!) {(user, error) in
@@ -95,6 +108,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func accionbuttonregistro(){
+        DataHolder.sharedInstance.miPerfil.sFirst = "Yony"
+        DataHolder.sharedInstance.miPerfil.iPass = "123456"
+        DataHolder.sharedInstance.miPerfil.semail = "asd@gmail.com"
 //        if !((txtfUser?.text?.isEmpty)!) && !((txtfPass?.text?.isEmpty)!) && !((txtfPasscon?.text?.isEmpty)!) && !((txtfemail?.text?.isEmpty)!) && txtfPasscon?.text == txtfPass?.text{
 //            self.performSegue(withIdentifier: "Aceptar", sender: self)
 //        }
