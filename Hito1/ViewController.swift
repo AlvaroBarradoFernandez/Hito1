@@ -44,6 +44,14 @@ class ViewController: UIViewController {
         
         
     }
+    
+    func showAlert() {
+        //Mostramos al usuario en un alert los datos de su registro
+        let str = String(format: "Datos de tu registro: \n Nombre: %@ \n Contraseña: %@ \n Email: %@", DataHolder.sharedInstance.miPerfil.sFirst!, DataHolder.sharedInstance.miPerfil.iPass!, DataHolder.sharedInstance.miPerfil.semail!)
+        let alertController = UIAlertController(title: "Registro", message: str, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Volver", style: UIAlertActionStyle.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,9 +65,7 @@ class ViewController: UIViewController {
         if txtfUsuario?.text=="Kiran" &&  txtfContraseña?.text=="1234" {
             self.performSegue(withIdentifier: "entrar", sender: self)
         }
-    */
- // Lo comento porque da error ARREGLAR PARA QUE PUEDAS INICIAR SESIÓN CON UN USUARIO NUEVO QUE SE HA REGISTRADO
-        
+        */
         print(txtfUsuario?.text)
         print(txtfContraseña?.text)
         Auth.auth().signIn(withEmail: (txtfUsuario?.text)!, password: (txtfContraseña?.text)!) { (user, error) in
@@ -86,6 +92,7 @@ class ViewController: UIViewController {
         Auth.auth().createUser(withEmail: (txtfemail?.text)!, password: (txtfPass?.text)!) {(user, error) in
         if (user != nil){
             print("Te registraste")
+            self.showAlert()
             // Add a new document with a generated ID
                 DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").document((user?.uid)!).setData([
                 "first": self.txtfUser?.text,
@@ -108,9 +115,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func accionbuttonregistro(){
-        DataHolder.sharedInstance.miPerfil.sFirst = "Yony"
-        DataHolder.sharedInstance.miPerfil.iPass = "123456"
-        DataHolder.sharedInstance.miPerfil.semail = "asd@gmail.com"
+        DataHolder.sharedInstance.miPerfil.sFirst = txtfUser?.text
+        DataHolder.sharedInstance.miPerfil.iPass = txtfPass?.text
+        DataHolder.sharedInstance.miPerfil.semail = txtfemail?.text
 //        if !((txtfUser?.text?.isEmpty)!) && !((txtfPass?.text?.isEmpty)!) && !((txtfPasscon?.text?.isEmpty)!) && !((txtfemail?.text?.isEmpty)!) && txtfPasscon?.text == txtfPass?.text{
 //            self.performSegue(withIdentifier: "Aceptar", sender: self)
 //        }
@@ -129,5 +136,7 @@ class ViewController: UIViewController {
         }
     }
 }
+
+
 
 
