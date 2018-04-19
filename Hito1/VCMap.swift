@@ -10,9 +10,10 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class VCMapa: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-@IBOutlet var miMapa:MKMapView?
+class VCMapa: UIViewController, CLLocationManagerDelegate {
+    @IBOutlet var miMapa:MKMapView?
     var locationManager:CLLocationManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager = CLLocationManager()
@@ -21,7 +22,6 @@ class VCMapa: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         locationManager?.startUpdatingLocation()
         miMapa?.showsUserLocation = true
         self.agregarPin(titulo: "Hola", latitude: 42, longitud: -3)
-        self.agregarPin(titulo: "Hola", latitude: 47, longitud: -6)
         
     }
 
@@ -31,14 +31,16 @@ class VCMapa: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        print("------>>>>>>>", locations[0])
-        let mispan:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-        
-        let tmpregion:MKCoordinateRegion = MKCoordinateRegion(center:locations[0].coordinate, span:mispan)
-        
-//        miMapa?.setRegion(tmpregion, animated: false)
+        print(locations[0])
+        self.nuevaRegionMapa(latuitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
     }
 
+    func nuevaRegionMapa(latuitude lat: Double, longitude lon:Double) {
+        let miSpan:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let puntoCentro:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        let miRegion:MKCoordinateRegion = MKCoordinateRegion(center: puntoCentro, span:miSpan)
+        miMapa?.setRegion(miRegion, animated: true)
+    }
     
     func agregarPin(titulo:String, latitude lat:Double, longitud lon:Double){
         let miannotation:MKPointAnnotation = MKPointAnnotation()

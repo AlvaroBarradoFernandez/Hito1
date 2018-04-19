@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var txtfUsuario:UITextField?
     @IBOutlet var txtfContraseña:UITextField?
     @IBOutlet var txtfUser:UITextField?
+    @IBOutlet var txtfAge:UITextField?
     @IBOutlet var txtfPass:UITextField?
     @IBOutlet var txtfPasscon:UITextField?
     @IBOutlet var txtfemail:UITextField?
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
     
     func showAlert() {
         //Mostramos al usuario en un alert los datos de su registro
-        let str = String(format: "Datos de tu registro: \n Nombre: %@ \n Contraseña: %@ \n Email: %@", DataHolder.sharedInstance.miPerfil.sFirst!, DataHolder.sharedInstance.miPerfil.iPass!, DataHolder.sharedInstance.miPerfil.semail!)
+        let str = String(format: "Datos de tu registro: \n Nombre: %@ \n Contraseña: %@ \n Email: %@ \n Edad: %d", DataHolder.sharedInstance.miPerfil.sFirst!, DataHolder.sharedInstance.miPerfil.iPass!, DataHolder.sharedInstance.miPerfil.semail!, DataHolder.sharedInstance.miPerfil.iAge!)
         let alertController = UIAlertController(title: "Registro", message: str, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Volver", style: UIAlertActionStyle.default,handler: nil))
         self.present(alertController, animated: true, completion: nil)
@@ -95,9 +96,10 @@ class ViewController: UIViewController {
             self.showAlert()
             // Add a new document with a generated ID
                 DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").document((user?.uid)!).setData([
-                "first": self.txtfUser?.text,
-                "pass": self.txtfPass?.text,
-                "email": self.txtfemail?.text
+                "first": self.txtfUser?.text as Any,
+                "pass": self.txtfPass?.text as Any,
+                "email": self.txtfemail?.text as Any,
+                "age": self.txtfAge?.text as Any
             ]) { err in
                 if let err = err {
                     print("Error adding document: \(err)")
@@ -118,6 +120,7 @@ class ViewController: UIViewController {
         DataHolder.sharedInstance.miPerfil.sFirst = txtfUser?.text
         DataHolder.sharedInstance.miPerfil.iPass = txtfPass?.text
         DataHolder.sharedInstance.miPerfil.semail = txtfemail?.text
+        DataHolder.sharedInstance.miPerfil.iAge = Int((txtfAge?.text)!)
 //        if !((txtfUser?.text?.isEmpty)!) && !((txtfPass?.text?.isEmpty)!) && !((txtfPasscon?.text?.isEmpty)!) && !((txtfemail?.text?.isEmpty)!) && txtfPasscon?.text == txtfPass?.text{
 //            self.performSegue(withIdentifier: "Aceptar", sender: self)
 //        }
