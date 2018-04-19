@@ -134,7 +134,7 @@
         <!--Objeto 1-->
         <scene sceneID="PLE-dc-QxE">
             <objects>
-                <viewController id="oG6-SK-plj" sceneMemberID="viewController">
+                <viewController id="oG6-SK-plj" customClass="VCMapa" customModule="Hito1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IVs-Mu-xDs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,12 +143,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.31387742373743399" green="1" blue="0.78100400066350573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oG6-SK-plj" id="3w1-Cn-9hF"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cco-ah-drU"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Objeto 1" id="yau-MX-qkM"/>
+                    <connections>
+                        <outlet property="miMapa" destination="k17-w7-yIr" id="azI-gD-zSH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5G-zU-Loa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
