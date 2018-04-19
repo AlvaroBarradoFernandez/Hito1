@@ -13,6 +13,8 @@ import FirebaseFirestore
 class ViewController: UIViewController {
     @IBOutlet var txtfUsuario:UITextField?
     @IBOutlet var txtfContraseña:UITextField?
+    @IBOutlet var txtfHeight:UITextField?
+    @IBOutlet var txtfWeight:UITextField?
     @IBOutlet var txtfUser:UITextField?
     @IBOutlet var txtfAge:UITextField?
     @IBOutlet var txtfPass:UITextField?
@@ -48,7 +50,7 @@ class ViewController: UIViewController {
     
     func showAlert() {
         //Mostramos al usuario en un alert los datos de su registro
-        let str = String(format: "Datos de tu registro: \n Nombre: %@ \n Contraseña: %@ \n Email: %@ \n Edad: %d", DataHolder.sharedInstance.miPerfil.sFirst!, DataHolder.sharedInstance.miPerfil.iPass!, DataHolder.sharedInstance.miPerfil.semail!, DataHolder.sharedInstance.miPerfil.iAge!)
+        let str = String(format: "Datos de tu registro: \n Nombre: %@ \n Contraseña: %@ \n Email: %@ \n Edad: %d \n Altura: %f \n Peso: %f", DataHolder.sharedInstance.miPerfil.sFirst!, DataHolder.sharedInstance.miPerfil.iPass!, DataHolder.sharedInstance.miPerfil.semail!, DataHolder.sharedInstance.miPerfil.iAge!, DataHolder.sharedInstance.miPerfil.iHeight!, DataHolder.sharedInstance.miPerfil.iWeight!)
         let alertController = UIAlertController(title: "Registro", message: str, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Volver", style: UIAlertActionStyle.default,handler: nil))
         self.present(alertController, animated: true, completion: nil)
@@ -99,7 +101,9 @@ class ViewController: UIViewController {
                 "first": self.txtfUser?.text as Any,
                 "pass": self.txtfPass?.text as Any,
                 "email": self.txtfemail?.text as Any,
-                "age": self.txtfAge?.text as Any
+                "age": self.txtfAge?.text as Any,
+                "height": self.txtfHeight?.text as Any,
+                "weight": self.txtfWeight?.text as Any
             ]) { err in
                 if let err = err {
                     print("Error adding document: \(err)")
@@ -121,6 +125,8 @@ class ViewController: UIViewController {
         DataHolder.sharedInstance.miPerfil.iPass = txtfPass?.text
         DataHolder.sharedInstance.miPerfil.semail = txtfemail?.text
         DataHolder.sharedInstance.miPerfil.iAge = Int((txtfAge?.text)!)
+        DataHolder.sharedInstance.miPerfil.iWeight = Double((txtfWeight?.text)!)
+        DataHolder.sharedInstance.miPerfil.iHeight = Double((txtfHeight?.text)!)
 //        if !((txtfUser?.text?.isEmpty)!) && !((txtfPass?.text?.isEmpty)!) && !((txtfPasscon?.text?.isEmpty)!) && !((txtfemail?.text?.isEmpty)!) && txtfPasscon?.text == txtfPass?.text{
 //            self.performSegue(withIdentifier: "Aceptar", sender: self)
 //        }
