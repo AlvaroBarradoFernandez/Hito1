@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet var txtfAge:UITextField?
     @IBOutlet var txtfPass:UITextField?
     @IBOutlet var txtfPasscon:UITextField?
-    @IBOutlet var txtfemail:UITextField?
+    @IBOutlet var txtfEmail:UITextField?
     @IBOutlet var buttonLogear:UIButton?
     @IBOutlet var buttonaceptar:UIButton?
     
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func clickRegistrar(){
-        Auth.auth().createUser(withEmail: (txtfemail?.text)!, password: (txtfPass?.text)!) {(user, error) in
+        Auth.auth().createUser(withEmail: (txtfEmail?.text)!, password: (txtfPass?.text)!) {(user, error) in
         if (user != nil){
             print("Te registraste")
             self.showAlert()
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
                 DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").document((user?.uid)!).setData([
                 "first": self.txtfUser?.text as Any,
                 "pass": self.txtfPass?.text as Any,
-                "email": self.txtfemail?.text as Any,
+                "email": self.txtfEmail?.text as Any,
                 "age": self.txtfAge?.text as Any,
                 "height": self.txtfHeight?.text as Any,
                 "weight": self.txtfWeight?.text as Any
@@ -123,7 +123,7 @@ class ViewController: UIViewController {
     @IBAction func accionbuttonregistro(){
         DataHolder.sharedInstance.miPerfil.sFirst = txtfUser?.text
         DataHolder.sharedInstance.miPerfil.iPass = txtfPass?.text
-        DataHolder.sharedInstance.miPerfil.semail = txtfemail?.text
+        DataHolder.sharedInstance.miPerfil.semail = txtfEmail?.text
         DataHolder.sharedInstance.miPerfil.iAge = Int((txtfAge?.text)!)
         DataHolder.sharedInstance.miPerfil.iWeight = Double((txtfWeight?.text)!)
         DataHolder.sharedInstance.miPerfil.iHeight = Double((txtfHeight?.text)!)

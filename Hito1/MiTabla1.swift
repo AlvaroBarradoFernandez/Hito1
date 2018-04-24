@@ -12,8 +12,24 @@ import Firebase
 class MiTabla1: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tablamia:UITableView?
+    var arPerfiles:[Perfil] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        let Perfiles:Perfil = Perfil()
+                        Perfiles.sID=document.documentID
+                        Perfiles.setMap(valores:document.data())
+                        self.arPerfiles.append(Perfiles)
+                        print("\(document.documentID) => \(document.data())")
+                    }
+                print("------>>>>", self.arPerfiles.count)
+                }
+            self.tablamia?.reloadData()
+        }
         tablamia?.delegate=self
         tablamia?.dataSource=self
         // Do any additional setup after loading the view.
@@ -24,35 +40,23 @@ class MiTabla1: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.arPerfiles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celdamia = tableView.dequeueReusableCell(withIdentifier: "celdamia") as! micelda1
-        
-        if indexPath.row==0{
-            celdamia.miLabel?.text = "Manzana"
-            celdamia.miImagen?.image = #imageLiteral(resourceName: "manzana")
-        }
-        else if indexPath.row == 1{
-            celdamia.miLabel?.text = "Pera"
-            celdamia.miImagen?.image = #imageLiteral(resourceName: "pera")
-        }
-        else if indexPath.row == 2{
-            celdamia.miLabel?.text = "Piña"
-            celdamia.miImagen?.image = #imageLiteral(resourceName: "pina")
-        }
-        else if indexPath.row == 3{
-            celdamia.miLabel?.text = "Platano"
-            celdamia.miImagen?.image = #imageLiteral(resourceName: "platano")
-        }
-        else if indexPath.row == 4{
-            celdamia.miLabel?.text = "Cereza"
-            celdamia.miImagen?.image = #imageLiteral(resourceName: "cereza")
-        }
+        celdamia.miLabel?.text=self.arPerfiles[indexPath.row].sFirst
+        //if indexPath.row==0{
+         //let query = Perfiles.whereField("*")
+        //}
         return celdamia
     }
-
+    func refreshUI(){
+        
+        DispatchQueue.main.async(execute:{
+            self.tablamia?.reloadData()
+        })
+    }
     /*
     // MARK: - Navigation
 

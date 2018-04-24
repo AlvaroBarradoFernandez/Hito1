@@ -10,6 +10,7 @@ import UIKit
 
 
 class Perfil: NSObject {
+    var sID:String?
     var sFirst:String?
     var iPass:String?
     var semail:String?

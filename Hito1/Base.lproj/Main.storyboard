@@ -132,17 +132,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="106.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGP-4R-buz">
+                                                    <rect key="frame" x="271" y="2" width="50" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbW-54-eYh">
-                                                    <rect key="frame" x="15" y="7" width="149" height="40"/>
+                                                    <rect key="frame" x="15" y="11" width="149" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGP-4R-buz">
-                                                    <rect key="frame" x="271" y="2" width="50" height="45"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -161,6 +161,9 @@
                         <viewLayoutGuide key="safeArea" id="ECH-dz-ePX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Objeto 2" id="AUD-PK-bd8"/>
+                    <connections>
+                        <outlet property="tablamia" destination="q2V-a5-PnR" id="j0w-aO-DdM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vua-VN-Dve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,7 +178,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="k17-w7-yIr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.31387742373743399" green="1" blue="0.78100400066350573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -271,13 +274,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yeS-bC-jlD">
-                                <rect key="frame" x="48" y="333" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oke-rB-Gi1">
                                 <rect key="frame" x="48" y="604" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -344,6 +340,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gGz-vb-aaZ">
+                                <rect key="frame" x="48" y="333" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LSw-jt-Par"/>
@@ -351,12 +354,12 @@
                     <connections>
                         <outlet property="buttonaceptar" destination="xpl-wH-ed2" id="83S-1g-vPh"/>
                         <outlet property="txtfAge" destination="No2-Jj-bme" id="UhK-0F-Kq8"/>
+                        <outlet property="txtfEmail" destination="gGz-vb-aaZ" id="0mC-nZ-uzF"/>
                         <outlet property="txtfHeight" destination="CDB-Ea-byJ" id="CDq-Th-pCh"/>
                         <outlet property="txtfPass" destination="a3S-0t-H5P" id="d1d-W7-IN1"/>
                         <outlet property="txtfPasscon" destination="7Yr-gR-hb5" id="T5l-fk-r7A"/>
                         <outlet property="txtfUser" destination="1Qf-Zi-cCj" id="5Q2-vk-sFc"/>
                         <outlet property="txtfWeight" destination="oS0-WU-Qwu" id="75S-FH-Aj9"/>
-                        <outlet property="txtfemail" destination="yeS-bC-jlD" id="5Bd-8Q-HW9"/>
                         <segue destination="S5L-Vf-VAa" kind="show" identifier="Aceptar" id="dD3-9v-biv"/>
                     </connections>
                 </viewController>
