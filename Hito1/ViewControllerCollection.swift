@@ -6,30 +6,30 @@
 //  Copyright © 2018 Alvaro Barrado. All rights reserved.
 //
 
-import UIKit
+//import UIKit
 
-class ViewControllerCollection: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
-    }
-    
-    @IBOutlet var col:UICollectionView?
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+//class ViewControllerCollection: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//
+//    }
+//
+//    @IBOutlet var col:UICollectionView?
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//
+//        // Do any additional setup after loading the view.
+//    }
+//
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
+//    
 
     /*
     // MARK: - Navigation
@@ -41,4 +41,5 @@ class ViewControllerCollection: UIViewController, UICollectionViewDelegate, UICo
     }
     */
 
-}
+//}
+
