@@ -15,8 +15,8 @@ class Perfil: NSObject {
     var iPass:String?
     var semail:String?
     var iAge:Int?
-    var iWeight:Double?
-    var iHeight:Double?
+    var fWeight:Float?
+    var fHeight:Float?
     var sImg:String?
     
     func setMap(valores:[String:Any]) {
@@ -24,9 +24,10 @@ class Perfil: NSObject {
         iPass = valores["pass"] as? String
         semail = valores["email"] as? String
         iAge = valores["age"] as? Int
-        iHeight = valores["height"] as? Double
-        iWeight = valores["weight"] as? Double
+        fHeight = valores["height"] as? Float
+        fWeight = valores["weight"] as? Float
         sImg = valores["url_image"] as? String
+        print("****************************", sImg)
     }
     func getMap() -> [String:Any]{
         var mapTemp:[String:Any] = [:]
@@ -34,8 +35,8 @@ class Perfil: NSObject {
         mapTemp["pass"] = iPass
         mapTemp["email"] = semail
         mapTemp["age"] = iAge
-        mapTemp["height"] = iHeight
-        mapTemp["weight"] = iWeight
+        mapTemp["height"] = fHeight
+        mapTemp["weight"] = fWeight
         mapTemp["url_image"] = sImg
         return mapTemp
           

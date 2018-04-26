@@ -31,12 +31,10 @@ class ViewController: UIViewController {
         txtfUser?.text = DataHolder.sharedInstance.sNick
         DataHolder.sharedInstance.sNick = "Nacho"
         txtfPass?.text = DataHolder.sharedInstance.sNick
- */
- /*
+         
         do {
           try Auth.auth().signOut()
         }catch{
-            
         }
         */
         Auth.auth().addStateDidChangeListener { (auth, user) in
@@ -44,13 +42,11 @@ class ViewController: UIViewController {
                // self.performSegue(withIdentifier: "entrar", sender: self)
             }
         }
-        
-        
     }
     
     func showAlert() {
         //Mostramos al usuario en un alert los datos de su registro
-        let str = String(format: "Datos de tu registro: \n Nombre: %@ \n Contraseña: %@ \n Email: %@ \n Edad: %d \n Altura: %f \n Peso: %f", DataHolder.sharedInstance.miPerfil.sFirst!, DataHolder.sharedInstance.miPerfil.iPass!, DataHolder.sharedInstance.miPerfil.semail!, DataHolder.sharedInstance.miPerfil.iAge!, DataHolder.sharedInstance.miPerfil.iHeight!, DataHolder.sharedInstance.miPerfil.iWeight!)
+        let str = String(format: "Datos de tu registro: \n Nombre: %@ \n Contraseña: %@ \n Email: %@ \n Edad: %d \n Altura: %f \n Peso: %f", DataHolder.sharedInstance.miPerfil.sFirst!, DataHolder.sharedInstance.miPerfil.iPass!, DataHolder.sharedInstance.miPerfil.semail!, DataHolder.sharedInstance.miPerfil.iAge!, DataHolder.sharedInstance.miPerfil.fHeight!, DataHolder.sharedInstance.miPerfil.fWeight!)
         let alertController = UIAlertController(title: "Registro", message: str, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Volver", style: UIAlertActionStyle.default,handler: nil))
         self.present(alertController, animated: true, completion: nil)
@@ -125,8 +121,8 @@ class ViewController: UIViewController {
         DataHolder.sharedInstance.miPerfil.iPass = txtfPass?.text
         DataHolder.sharedInstance.miPerfil.semail = txtfEmail?.text
         DataHolder.sharedInstance.miPerfil.iAge = Int((txtfAge?.text)!)
-        DataHolder.sharedInstance.miPerfil.iWeight = Double((txtfWeight?.text)!)
-        DataHolder.sharedInstance.miPerfil.iHeight = Double((txtfHeight?.text)!)
+        DataHolder.sharedInstance.miPerfil.fWeight = Float((txtfWeight?.text)!)
+        DataHolder.sharedInstance.miPerfil.fHeight = Float((txtfHeight?.text)!)
 //        if !((txtfUser?.text?.isEmpty)!) && !((txtfPass?.text?.isEmpty)!) && !((txtfPasscon?.text?.isEmpty)!) && !((txtfemail?.text?.isEmpty)!) && txtfPasscon?.text == txtfPass?.text{
 //            self.performSegue(withIdentifier: "Aceptar", sender: self)
 //        }

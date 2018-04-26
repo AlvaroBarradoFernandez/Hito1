@@ -18,6 +18,7 @@
 		2AAAB8192085FB4C00F02AF3 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB8182085FB4C00F02AF3 /* Alert.swift */; };
 		2AAAB81B2088795600F02AF3 /* VCMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB81A2088795500F02AF3 /* VCMap.swift */; };
 		2AAAB81F208F385A00F02AF3 /* ViewControllerCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB81E208F385A00F02AF3 /* ViewControllerCollection.swift */; };
+		2AAAB821208F53EA00F02AF3 /* micelda2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB820208F53EA00F02AF3 /* micelda2CollectionViewCell.swift */; };
 		2AF35EAA207CDD6200695453 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */; };
 		2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35EAB207CE1B000695453 /* DataHolder.swift */; };
 		2AF35EAE207F88DA00695453 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35EAD207F88DA00695453 /* Perfil.swift */; };
@@ -40,6 +41,7 @@
 		2AAAB8182085FB4C00F02AF3 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		2AAAB81A2088795500F02AF3 /* VCMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMap.swift; sourceTree = "<group>"; };
 		2AAAB81E208F385A00F02AF3 /* ViewControllerCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCollection.swift; sourceTree = "<group>"; };
+		2AAAB820208F53EA00F02AF3 /* micelda2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = micelda2CollectionViewCell.swift; sourceTree = "<group>"; };
 		2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AF35EAB207CE1B000695453 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		2AF35EAD207F88DA00695453 /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				2AAAB8182085FB4C00F02AF3 /* Alert.swift */,
 				2AAAB81A2088795500F02AF3 /* VCMap.swift */,
 				2AAAB81E208F385A00F02AF3 /* ViewControllerCollection.swift */,
+				2AAAB820208F53EA00F02AF3 /* micelda2CollectionViewCell.swift */,
 			);
 			path = Hito1;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */,
 				2AA312D12076110700C46165 /* micelda1.swift in Sources */,
 				2AA312BA20751E8200C46165 /* ViewController.swift in Sources */,
+				2AAAB821208F53EA00F02AF3 /* micelda2CollectionViewCell.swift in Sources */,
 				2AA312B820751E8200C46165 /* AppDelegate.swift in Sources */,
 				2AAAB8192085FB4C00F02AF3 /* Alert.swift in Sources */,
 				2AA312C020751E8200C46165 /* Hito1.xcdatamodeld in Sources */,

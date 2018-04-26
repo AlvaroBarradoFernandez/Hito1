@@ -6,40 +6,64 @@
 //  Copyright © 2018 Alvaro Barrado. All rights reserved.
 //
 
-//import UIKit
+import UIKit
+import Firebase
 
-//class ViewControllerCollection: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//
-//    }
-//
-//    @IBOutlet var col:UICollectionView?
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//
-//        // Do any additional setup after loading the view.
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+class ViewControllerCollection: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, DataHolderDelegate {
+    
+    @IBOutlet var tablamia:UICollectionView?
+    var arPerfiles:[Perfil] = []
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        //DataHolder.sharedInstance.descargarPerfiles(delegate: self)
+        
+        DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").addSnapshotListener() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.arPerfiles = []
+                for document in querySnapshot!.documents {
+                    let Perfiles:Perfil = Perfil()
+                    Perfiles.sID=document.documentID
+                    Perfiles.setMap(valores:document.data())
+                    self.arPerfiles.append(Perfiles)
+                    print("\(document.documentID) => \(document.data())")
+                }
+                print("------>>>>", self.arPerfiles.count)
+            }
+            self.tablamia?.reloadData()
+        }
+       
+        // Do any additional setup after loading the view.
     }
-    */
+    
+    func DHDDescargaCiudadesCompleta(blFin: Bool) {
+        if blFin{
+            tablamia?.reloadData()
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
-//}
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+      return arPerfiles.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let celdamia:micelda2CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "celdamia", for: indexPath) as! micelda2CollectionViewCell
+        celdamia.lblNombre?.text = arPerfiles[indexPath.row].sFirst
+        celdamia.mostrarImagen(uri: arPerfiles[indexPath.row].sImg!)
+        
+        return celdamia
+    }
 
+    func refreshUI(){
+        DispatchQueue.main.async(execute:{
+            self.tablamia?.reloadData()
+        })
+    }
+}

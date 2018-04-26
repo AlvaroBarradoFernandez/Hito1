@@ -16,6 +16,9 @@ class VCMapa: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       //DataHolder.sharedInstance.descargarPerfiles(delegate: self)
+        
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestAlwaysAuthorization()
@@ -40,6 +43,16 @@ class VCMapa: UIViewController, CLLocationManagerDelegate {
         let puntoCentro:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: lat, longitude: lon)
         let miRegion:MKCoordinateRegion = MKCoordinateRegion(center: puntoCentro, span:miSpan)
         miMapa?.setRegion(miRegion, animated: true)
+    }
+    
+    func DHDDescargaCiudadesCompleta(blFin: Bool){
+        if blFin{
+            self.agregarPines()
+        }
+    }
+    
+    func agregarPines(){
+        print("Agregando Pines")
     }
     
     func agregarPin(titulo:String, latitude lat:Double, longitud lon:Double){

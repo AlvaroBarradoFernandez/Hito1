@@ -78,52 +78,67 @@
             <point key="canvasLocation" x="-714.39999999999998" y="-546.47676161919048"/>
         </scene>
         <!--Objeto 3-->
-        <scene sceneID="VNb-q0-1PZ">
+        <scene sceneID="ZqR-NZ-2rg">
             <objects>
-                <collectionViewController id="p61-ed-O8S" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZRc-2c-ewf">
+                <viewController id="AUL-fs-3iF" customClass="ViewControllerCollection" customModule="Hito1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hbV-GO-WSR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.96034178471614573" green="1" blue="0.99137343886604801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jGf-Fy-qMo">
-                            <size key="itemSize" width="375" height="112"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DKf-Y1-mLC">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZRc-2c-ewf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4XR-4W-svw">
-                                            <rect key="frame" x="7" y="0.0" width="146" height="112"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpC-Lu-fpj">
-                                            <rect key="frame" x="213" y="46" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="p61-ed-O8S" id="iNU-Mk-A8n"/>
-                            <outlet property="delegate" destination="p61-ed-O8S" id="VQh-G6-r70"/>
-                        </connections>
-                    </collectionView>
-                    <tabBarItem key="tabBarItem" title="Objeto 3" id="UpA-5T-iOH"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1ip-QN-eGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                                <color key="backgroundColor" red="0.69413744479999995" green="0.64410449510000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jGf-Fy-qMo">
+                                    <size key="itemSize" width="375" height="112"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celdamia" id="DKf-Y1-mLC" customClass="micelda2CollectionViewCell" customModule="Hito1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4XR-4W-svw">
+                                                    <rect key="frame" x="7" y="0.0" width="146" height="112"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpC-Lu-fpj">
+                                                    <rect key="frame" x="213" y="46" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="imgMain" destination="4XR-4W-svw" id="4cR-VP-SNj"/>
+                                            <outlet property="lblNombre" destination="GpC-Lu-fpj" id="ENe-Vf-6mO"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="AUL-fs-3iF" id="tMl-JX-qb6"/>
+                                    <outlet property="delegate" destination="AUL-fs-3iF" id="QxD-KM-TlV"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hyE-L2-khG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Objeto 3" id="NCu-0c-USF"/>
+                    <connections>
+                        <outlet property="tablamia" destination="ZRc-2c-ewf" id="Q0e-0n-UUB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SH4-Re-bkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="1097.9010494752624"/>
+            <point key="canvasLocation" x="508" y="1171"/>
         </scene>
         <!--Objeto 2-->
         <scene sceneID="5Dg-iT-vuj">
@@ -223,7 +238,7 @@
                     <connections>
                         <segue destination="oG6-SK-plj" kind="relationship" relationship="viewControllers" id="aPf-O5-P78"/>
                         <segue destination="K5G-P9-9MX" kind="relationship" relationship="viewControllers" id="JtV-1k-QgU"/>
-                        <segue destination="p61-ed-O8S" kind="relationship" relationship="viewControllers" id="WEa-Ne-dxq"/>
+                        <segue destination="AUL-fs-3iF" kind="relationship" relationship="viewControllers" id="W7F-zl-xY9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ni5-q2-Q2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -382,6 +397,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="O4E-M1-vbC"/>
+        <segue reference="dD3-9v-biv"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,10 +15,11 @@ class MiTabla1: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var arPerfiles:[Perfil] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").getDocuments() { (querySnapshot, err) in
+        DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").addSnapshotListener() { (querySnapshot, err) in
             if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
+                self.arPerfiles = []
                     for document in querySnapshot!.documents {
                         let Perfiles:Perfil = Perfil()
                         Perfiles.sID=document.documentID
