@@ -15,6 +15,7 @@ class DataHolder: NSObject {
     var firestoreDB:Firestore?
     var miPerfil:Perfil = Perfil()
     var arPerfiles:[Perfil] = []
+    var HMIMG:[String:UIImage]=[:]
     var firStorage:Storage?
     func initFireBase(){
         FirebaseApp.configure()

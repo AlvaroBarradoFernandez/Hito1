@@ -25,6 +25,10 @@ class micelda2CollectionViewCell: UICollectionViewCell {
     */
     func mostrarImagen(uri:String){
         self.imgMain?.image = nil
+        let imagenDes = DataHolder.sharedInstance.HMIMG[uri]
+        if imagenDes != nil{
+            imgMain?.image = imagenDes
+        }else{
         // if ImagenDescargada == nil{
         // Create a reference to the file you want to download
         let gsReference = DataHolder.sharedInstance.firStorage?.reference(forURL: uri)
@@ -38,9 +42,10 @@ class micelda2CollectionViewCell: UICollectionViewCell {
                 //let image = UIImage(data: data!)
                 self.ImagenDescargada = UIImage(data: data!)
                 self.imgMain?.image = self.ImagenDescargada
+                DataHolder.sharedInstance.HMIMG[uri] = self.ImagenDescargada
             }
         }
-        
+        }
         //}
         
     }
