@@ -10,14 +10,14 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class VCMapa: UIViewController, CLLocationManagerDelegate {
+class VCMapa: UIViewController, CLLocationManagerDelegate, DataHolderDelegate {
     @IBOutlet var miMapa:MKMapView?
     var locationManager:CLLocationManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       //DataHolder.sharedInstance.descargarPerfiles(delegate: self)
+        DataHolder.sharedInstance.descargarPerfiles(delegate:self)
         
         locationManager = CLLocationManager()
         locationManager?.delegate = self
