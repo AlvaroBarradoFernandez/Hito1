@@ -25,7 +25,7 @@ class VCMapa: UIViewController, CLLocationManagerDelegate, DataHolderDelegate {
         locationManager?.startUpdatingLocation()
         miMapa?.showsUserLocation = true
         self.agregarPin(titulo: "Hola", latitude: 42, longitud: -3)
-        
+        self.agregarPin(titulo: "Hola2", latitude: 40, longitud: -3)
     }
 
     override func didReceiveMemoryWarning() {
