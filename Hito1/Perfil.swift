@@ -18,6 +18,7 @@ class Perfil: NSObject {
     var fWeight:Float?
     var fHeight:Float?
     var sImg:String?
+    var sDate:Date?
     
     func setMap(valores:[String:Any]) {
         sFirst = valores["first"] as? String
@@ -27,6 +28,7 @@ class Perfil: NSObject {
         fHeight = valores["height"] as? Float
         fWeight = valores["weight"] as? Float
         sImg = valores["url_image"] as? String
+        sDate = valores["date"] as? Date
         print("****************************", sImg)
     }
     func getMap() -> [String:Any]{
@@ -38,6 +40,7 @@ class Perfil: NSObject {
         mapTemp["height"] = fHeight
         mapTemp["weight"] = fWeight
         mapTemp["url_image"] = sImg
+        mapTemp["date"] = sDate
         return mapTemp
           
         

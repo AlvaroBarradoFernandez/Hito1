@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import FirebaseAuth
 
-class VCLogin: UIViewController {
-
+class VCLogin:  UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet var txtfUsuario:UITextField?
+    @IBOutlet var txtfContraseña:UITextField?
+    @IBOutlet var buttonLogear:UIButton?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +24,32 @@ class VCLogin: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func accionbuttonLogear(){
+        /*
+         if txtfUsuario?.text=="Alvaro" &&  txtfContraseña?.text=="1234" {
+         self.performSegue(withIdentifier: "entrar", sender: self)
+         }
+         if txtfUsuario?.text=="Kiran" &&  txtfContraseña?.text=="1234" {
+         self.performSegue(withIdentifier: "entrar", sender: self)
+         }
+         */
+        print(txtfUsuario?.text)
+        print(txtfContraseña?.text)
+        Auth.auth().signIn(withEmail: (txtfUsuario?.text)!, password: (txtfContraseña?.text)!) { (user, error) in
+            if (user != nil){
+                DataHolder.sharedInstance.firUser = user
+                let refPerfil =
+                    DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").document ((user?.uid)!)
+                refPerfil?.getDocument{(document, error) in if document != nil{
+                    DataHolder.sharedInstance.miPerfil.setMap(valores:(document?.data())!)
+                    print(DataHolder.sharedInstance.miPerfil.sFirst!)
+                    self.performSegue(withIdentifier: "entrar", sender: self)
+                    //self.performSegue(withIdentifier: "entrar", sender: self)
+                }else{
+                    print(error!)
+                    }
+                }
+            }
+        }
     }
-    */
-
 }

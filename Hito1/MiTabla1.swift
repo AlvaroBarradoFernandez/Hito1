@@ -47,7 +47,9 @@ class MiTabla1: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celdamia = tableView.dequeueReusableCell(withIdentifier: "celdamia") as! micelda1
         celdamia.miLabel?.text=self.arPerfiles[indexPath.row].sFirst
-        celdamia.mostrarImagen(uri: self.arPerfiles[indexPath.row].sImg!)
+        if arPerfiles[indexPath.row].sImg != nil{
+            celdamia.mostrarImagen(uri: self.arPerfiles[indexPath.row].sImg!)
+        }
         //if indexPath.row==0{
          //let query = Perfiles.whereField("*")
         //}

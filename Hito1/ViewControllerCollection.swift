@@ -56,8 +56,9 @@ class ViewControllerCollection: UIViewController, UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celdamia:micelda2CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "celdamia", for: indexPath) as! micelda2CollectionViewCell
         celdamia.lblNombre?.text = arPerfiles[indexPath.row].sFirst
-        celdamia.mostrarImagen(uri: arPerfiles[indexPath.row].sImg!)
-        
+        if arPerfiles[indexPath.row].sImg != nil{
+            celdamia.mostrarImagen(uri: arPerfiles[indexPath.row].sImg!)
+        }
         return celdamia
     }
 

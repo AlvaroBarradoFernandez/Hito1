@@ -9,6 +9,7 @@
 import UIKit
 
 class VCSelect: UIViewController {
+    @IBOutlet var imgView:UIImageView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +21,13 @@ class VCSelect: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func accionBotonGaleria(){
+        
+    }
     
-
+    @IBAction func accionBotonCamera(){
+        
+    }
     /*
     // MARK: - Navigation
 

@@ -47,6 +47,10 @@
 	<string>Permitir Ubicacion?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Permitir Ubicacion?</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Quiero usar la galeria</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Permitir Ubicacion?</string>
 </dict>

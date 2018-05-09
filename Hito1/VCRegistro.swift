@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import FirebaseAuth
 
-class VCRegistro: UIViewController {
-
+class VCRegistro: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet var txtfPass:UITextField?
+    @IBOutlet var txtfPasscon:UITextField?
+    @IBOutlet var txtfEmail:UITextField?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +24,18 @@ class VCRegistro: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func clickRegistrar(){
+        DataHolder.sharedInstance.miPerfil.iPass = txtfPass?.text
+        DataHolder.sharedInstance.miPerfil.semail = txtfEmail?.text
+        
+        Auth.auth().createUser(withEmail: (txtfEmail?.text)!, password: (txtfPass?.text)!){(user, error) in
+            if user != nil{
+                DataHolder.sharedInstance.firUser = user
+                 self.performSegue(withIdentifier: "registrar", sender: self)
+               
+            }
+        }
     }
-    */
+
 
 }
