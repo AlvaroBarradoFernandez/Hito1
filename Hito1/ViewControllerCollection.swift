@@ -10,14 +10,10 @@ import UIKit
 import Firebase
 
 class ViewControllerCollection: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, DataHolderDelegate {
-    
     @IBOutlet var tablamia:UICollectionView?
     var arPerfiles:[Perfil] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        //DataHolder.sharedInstance.descargarPerfiles(delegate: self)
-        
         DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").addSnapshotListener() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -34,8 +30,6 @@ class ViewControllerCollection: UIViewController, UICollectionViewDelegate, UICo
             }
             self.tablamia?.reloadData()
         }
-       
-        // Do any additional setup after loading the view.
     }
     
     func DHDDescargaCiudadesCompleta(blFin: Bool) {

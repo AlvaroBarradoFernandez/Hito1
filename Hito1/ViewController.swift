@@ -33,8 +33,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func showAlert() {
         //Mostramos al usuario en un alert los datos de su registro
-        let str = String(format: "Datos de tu registro: \n Nombre: %@  \n Fecha última regla: %@ \n Edad: %d \n Altura: %f \n Peso: %f", DataHolder.sharedInstance.miPerfil.sFirst!,
-                         DataHolder.sharedInstance.miPerfil.sDate! as CVarArg,
+        let str = String(format: "Datos de tu registro: \n Nombre: %@  \n Fecha última regla: %@ \n Edad: %d \n Altura: %f \n Peso: %f", DataHolder.sharedInstance.miPerfil.sFirst!, DataHolder.sharedInstance.miPerfil.sDate! as CVarArg,
             DataHolder.sharedInstance.miPerfil.iAge!, DataHolder.sharedInstance.miPerfil.fHeight!, DataHolder.sharedInstance.miPerfil.fWeight!)
         let alertController = UIAlertController(title: "Registro", message: str, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Volver", style: UIAlertActionStyle.default,handler: nil))
@@ -58,24 +57,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func accionBotonGaleria(){
         imagePicker.allowsEditing = false;
         imagePicker.sourceType = .photoLibrary
-        
         self.present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func accionBotonCamera(){
         imagePicker.allowsEditing = false;
         imagePicker.sourceType = .camera
-        
         self.present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func accionBotonSubir(){
-        let imagenRef = DataHolder.sharedInstance.firStorageRef?.child("tutorial/miimagen.jpg")
-        
+        let ruta:String = String(format: "tutorial/%@/miimagen.jpg", (DataHolder.sharedInstance.firUser?.uid)!)
+        let imagenRef = DataHolder.sharedInstance.firStorageRef?.child(ruta)
         let uploadTask = imagenRef?.putData(imgData!,metadata:nil){
             (metadata, error) in
             guard let metadata = metadata else{
-                return
+                return 
             }
             let downloadURL = metadata.path
             //print("Mi URL: ", metadata.downloadURLs)

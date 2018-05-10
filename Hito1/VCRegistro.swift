@@ -15,7 +15,6 @@ class VCRegistro: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBOutlet var txtfEmail:UITextField?
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -23,19 +22,21 @@ class VCRegistro: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     @IBAction func clickRegistrar(){
         DataHolder.sharedInstance.miPerfil.iPass = txtfPass?.text
         DataHolder.sharedInstance.miPerfil.semail = txtfEmail?.text
-        
-        Auth.auth().createUser(withEmail: (txtfEmail?.text)!, password: (txtfPass?.text)!){(user, error) in
-            if user != nil{
-                DataHolder.sharedInstance.firUser = user
-                 self.performSegue(withIdentifier: "registrar", sender: self)
-               
+        if (self.txtfPass?.text == self.txtfPasscon?.text){
+            Auth.auth().createUser(withEmail: (txtfEmail?.text)!, password: (txtfPass?.text)!){(user, error) in
+                if user != nil{
+                    DataHolder.sharedInstance.firUser = user
+                    print("Las contraseñas coinciden")
+                    self.performSegue(withIdentifier: "registrar", sender: self)
+                }
             }
+        }else{
+            print("Las contraseñas no coinciden")
         }
     }
-
-
 }
+

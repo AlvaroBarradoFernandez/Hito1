@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class Perfil: NSObject {
     var sID:String?
     var sFirst:String?
@@ -31,6 +30,7 @@ class Perfil: NSObject {
         sDate = valores["date"] as? Date
         print("****************************", sImg)
     }
+    
     func getMap() -> [String:Any]{
         var mapTemp:[String:Any] = [:]
         mapTemp["first"] = sFirst
@@ -42,7 +42,5 @@ class Perfil: NSObject {
         mapTemp["url_image"] = sImg
         mapTemp["date"] = sDate
         return mapTemp
-          
-        
     }
 }

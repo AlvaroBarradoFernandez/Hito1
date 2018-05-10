@@ -18,7 +18,6 @@ class DataHolder: NSObject {
     var HMIMG:[String:UIImage]=[:]
     var firStorage:Storage?
     var firStorageRef:StorageReference?
-    
     var firUser:User?
     
     func initFireBase(){
@@ -27,6 +26,7 @@ class DataHolder: NSObject {
         firStorage = Storage.storage()
         firStorageRef = firStorage?.reference()
     }
+    
     func descargarPerfiles(delegate:DataHolderDelegate){
         firestoreDB?.collection("Perfiles").getDocuments() { (querySnapshot, err) in
             if let err = err{
@@ -48,18 +48,16 @@ class DataHolder: NSObject {
     
     func registro(txtfEmail:String, pass txtfPass:String){
         Auth.auth().createUser(withEmail: (txtfEmail), password: (txtfPass)) {(user, error) in
-        if (user != nil){
-            print("Te registraste")
-        }else{
-            print("No se ha creado")
-            print(error!)
+            if (user != nil){
+                print("Te registraste")
+            }else{
+                print("No se ha creado")
+                print(error!)
+            }
         }
-    }
     }
 }
 
 @objc protocol DataHolderDelegate{
     @objc optional func DHDDescargaCiudadesCompleta(blFin:Bool)
 }
-
-

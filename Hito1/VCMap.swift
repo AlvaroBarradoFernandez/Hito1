@@ -16,9 +16,7 @@ class VCMapa: UIViewController, CLLocationManagerDelegate, DataHolderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         DataHolder.sharedInstance.descargarPerfiles(delegate:self)
-        
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestAlwaysAuthorization()
@@ -62,14 +60,4 @@ class VCMapa: UIViewController, CLLocationManagerDelegate, DataHolderDelegate {
         miannotation.title=titulo
         miMapa?.addAnnotation(miannotation)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

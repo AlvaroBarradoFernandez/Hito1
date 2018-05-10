@@ -19,7 +19,7 @@ class MiTabla1: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
-                self.arPerfiles = []
+                    self.arPerfiles = []
                     for document in querySnapshot!.documents {
                         let Perfiles:Perfil = Perfil()
                         Perfiles.sID=document.documentID
@@ -27,7 +27,7 @@ class MiTabla1: UIViewController, UITableViewDelegate, UITableViewDataSource {
                         self.arPerfiles.append(Perfiles)
                         print("\(document.documentID) => \(document.data())")
                     }
-                print("------>>>>", self.arPerfiles.count)
+                    print("------>>>>", self.arPerfiles.count)
                 }
             self.tablamia?.reloadData()
         }
@@ -40,6 +40,7 @@ class MiTabla1: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.arPerfiles.count
     }
@@ -50,25 +51,12 @@ class MiTabla1: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if arPerfiles[indexPath.row].sImg != nil{
             celdamia.mostrarImagen(uri: self.arPerfiles[indexPath.row].sImg!)
         }
-        //if indexPath.row==0{
-         //let query = Perfiles.whereField("*")
-        //}
         return celdamia
     }
+    
     func refreshUI(){
-        
         DispatchQueue.main.async(execute:{
             self.tablamia?.reloadData()
         })
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

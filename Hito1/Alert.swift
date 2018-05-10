@@ -14,7 +14,6 @@ class Alert: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         displayLbl.text = "Press Save"
     }
     
@@ -25,7 +24,6 @@ class Alert: UIViewController {
     
     @IBAction func savePressed(_ sender: UIButton) {
         let alertView = UIAlertController(title: "Save", message: "Do you really want to save?", preferredStyle: .actionSheet)
-        
         let cancel = UIAlertAction(title: "Cancel", style: .destructive) { (action) in
             self.displayLbl.text = "Save Canceled"
         }
@@ -34,8 +32,8 @@ class Alert: UIViewController {
         }
         alertView.addAction(cancel)
         alertView.addAction(save)
-        
         present(alertView, animated: true, completion: nil)
-    }}
+    }
+}
 
 
