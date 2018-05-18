@@ -19,6 +19,7 @@ class DataHolder: NSObject {
     var firStorage:Storage?
     var firStorageRef:StorageReference?
     var firUser:User?
+    var blConfg:Bool = false
     
     func initFireBase(){
         FirebaseApp.configure()

@@ -67,6 +67,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func accionBotonSubir(){
+        var sTransicion:String = "AceptaALogin"
+        
+        if DataHolder.sharedInstance.blConfg == true{
+            sTransicion = "AceptaAConfiguracion"
+        }
         let ruta:String = String(format: "tutorial/%@/miimagen.jpg", (DataHolder.sharedInstance.firUser?.uid)!)
         let imagenRef = DataHolder.sharedInstance.firStorageRef?.child(ruta)
         let uploadTask = imagenRef?.putData(imgData!,metadata:nil){
@@ -78,7 +83,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             //print("Mi URL: ", metadata.downloadURLs)
             DataHolder.sharedInstance.miPerfil.sImg = metadata.downloadURL()?.absoluteString
             self.guardarPerfil()
-            self.showAlert()
+            //self.showAlert()
+            self.performSegue(withIdentifier: sTransicion, sender: self)
         }
     }
     
