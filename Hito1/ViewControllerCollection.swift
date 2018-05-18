@@ -40,7 +40,6 @@ class ViewControllerCollection: UIViewController, UICollectionViewDelegate, UICo
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

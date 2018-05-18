@@ -15,7 +15,6 @@
 		2AA312C520751E8200C46165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA312C320751E8200C46165 /* LaunchScreen.storyboard */; };
 		2AA312CF2076083600C46165 /* MiTabla1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA312CE2076083600C46165 /* MiTabla1.swift */; };
 		2AA312D12076110700C46165 /* micelda1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA312D02076110700C46165 /* micelda1.swift */; };
-		2AAAB8192085FB4C00F02AF3 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB8182085FB4C00F02AF3 /* Alert.swift */; };
 		2AAAB81B2088795600F02AF3 /* VCMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB81A2088795500F02AF3 /* VCMap.swift */; };
 		2AAAB81F208F385A00F02AF3 /* ViewControllerCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB81E208F385A00F02AF3 /* ViewControllerCollection.swift */; };
 		2AAAB821208F53EA00F02AF3 /* micelda2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB820208F53EA00F02AF3 /* micelda2CollectionViewCell.swift */; };
@@ -26,6 +25,7 @@
 		2AF35EAA207CDD6200695453 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */; };
 		2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35EAB207CE1B000695453 /* DataHolder.swift */; };
 		2AF35EAE207F88DA00695453 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35EAD207F88DA00695453 /* Perfil.swift */; };
+		2AFB34FD20AEFF1F00F16580 /* VCRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB34FC20AEFF1F00F16580 /* VCRegistrar.swift */; };
 		85490108B7822CF417BD46BA /* Pods_Hito1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27324900B0BE3CB5AAE0B826 /* Pods_Hito1.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,6 @@
 		2AA312C620751E8200C46165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AA312CE2076083600C46165 /* MiTabla1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiTabla1.swift; sourceTree = "<group>"; };
 		2AA312D02076110700C46165 /* micelda1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = micelda1.swift; sourceTree = "<group>"; };
-		2AAAB8182085FB4C00F02AF3 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		2AAAB81A2088795500F02AF3 /* VCMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMap.swift; sourceTree = "<group>"; };
 		2AAAB81E208F385A00F02AF3 /* ViewControllerCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCollection.swift; sourceTree = "<group>"; };
 		2AAAB820208F53EA00F02AF3 /* micelda2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = micelda2CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AF35EAB207CE1B000695453 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		2AF35EAD207F88DA00695453 /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
+		2AFB34FC20AEFF1F00F16580 /* VCRegistrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegistrar.swift; sourceTree = "<group>"; };
 		3AE98A418DE94A0823573824 /* Pods-Hito1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hito1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hito1/Pods-Hito1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +93,7 @@
 				2AA312B720751E8200C46165 /* AppDelegate.swift */,
 				2AA312B920751E8200C46165 /* ViewController.swift */,
 				2AF35EAB207CE1B000695453 /* DataHolder.swift */,
+				2AFB34FC20AEFF1F00F16580 /* VCRegistrar.swift */,
 				2AB25A0220AED1F300850E7C /* Calendar.swift */,
 				2AA312BB20751E8200C46165 /* Main.storyboard */,
 				2AA312C120751E8200C46165 /* Assets.xcassets */,
@@ -103,7 +104,6 @@
 				2AA312CE2076083600C46165 /* MiTabla1.swift */,
 				2AA312D02076110700C46165 /* micelda1.swift */,
 				2AF35EAD207F88DA00695453 /* Perfil.swift */,
-				2AAAB8182085FB4C00F02AF3 /* Alert.swift */,
 				2AAAB81A2088795500F02AF3 /* VCMap.swift */,
 				2AAAB81E208F385A00F02AF3 /* ViewControllerCollection.swift */,
 				2AAAB820208F53EA00F02AF3 /* micelda2CollectionViewCell.swift */,
@@ -264,6 +264,7 @@
 			files = (
 				2AA312CF2076083600C46165 /* MiTabla1.swift in Sources */,
 				2AAAB81B2088795600F02AF3 /* VCMap.swift in Sources */,
+				2AFB34FD20AEFF1F00F16580 /* VCRegistrar.swift in Sources */,
 				2AAAB82920A307DC00F02AF3 /* VCLogin.swift in Sources */,
 				2AAAB81F208F385A00F02AF3 /* ViewControllerCollection.swift in Sources */,
 				2AF35EAE207F88DA00695453 /* Perfil.swift in Sources */,
@@ -273,7 +274,6 @@
 				2AA312BA20751E8200C46165 /* ViewController.swift in Sources */,
 				2AAAB821208F53EA00F02AF3 /* micelda2CollectionViewCell.swift in Sources */,
 				2AA312B820751E8200C46165 /* AppDelegate.swift in Sources */,
-				2AAAB8192085FB4C00F02AF3 /* Alert.swift in Sources */,
 				2AA312C020751E8200C46165 /* Hito1.xcdatamodeld in Sources */,
 				2AAAB82520A3036A00F02AF3 /* VCRegistro.swift in Sources */,
 				2AB25A0320AED1F300850E7C /* Calendar.swift in Sources */,

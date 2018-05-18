@@ -1,5 +1,5 @@
 //
-//  Calendar.swift
+//  VCRegistrar.swift
 //  Hito1
 //
 //  Created by Alvaro Barrado on 18/5/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Calendar: UIViewController {
+class VCRegistrar: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,4 +17,9 @@ class Calendar: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func nuevoRegistro(){
+        
+    }
+
 }

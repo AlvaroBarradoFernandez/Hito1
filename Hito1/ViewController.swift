@@ -66,11 +66,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func accionVolver() {
+        var sTransicionV:String = "PerfilALogin"
+        if DataHolder.sharedInstance.blConfg == true{
+            sTransicionV = "PerfilAConfig"
+        }
+        self.performSegue(withIdentifier: sTransicionV, sender: self)
+    }
+    
     @IBAction func accionBotonSubir(){
-        var sTransicion:String = "AceptaALogin"
+        var sTransicionA:String = "PerfilALogin"
         
         if DataHolder.sharedInstance.blConfg == true{
-            sTransicion = "AceptaAConfiguracion"
+            sTransicionA = "PerfilAConfig"
         }
         let ruta:String = String(format: "tutorial/%@/miimagen.jpg", (DataHolder.sharedInstance.firUser?.uid)!)
         let imagenRef = DataHolder.sharedInstance.firStorageRef?.child(ruta)
@@ -80,11 +88,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 return 
             }
             let downloadURL = metadata.path
-            //print("Mi URL: ", metadata.downloadURLs)
             DataHolder.sharedInstance.miPerfil.sImg = metadata.downloadURL()?.absoluteString
             self.guardarPerfil()
             //self.showAlert()
-            self.performSegue(withIdentifier: sTransicion, sender: self)
+            self.performSegue(withIdentifier: sTransicionA, sender: self)
         }
     }
     
