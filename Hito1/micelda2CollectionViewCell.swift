@@ -18,6 +18,7 @@ class micelda2CollectionViewCell: UICollectionViewCell {
 
     func mostrarImagen(uri:String){
         self.imgMain?.image = nil
+        print("-------")
         let imagenDes = DataHolder.sharedInstance.HMIMG[uri]
         if imagenDes != nil{
             imgMain?.image = imagenDes
