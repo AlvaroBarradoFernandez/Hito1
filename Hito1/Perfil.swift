@@ -18,6 +18,7 @@ class Perfil: NSObject {
     var fHeight:Float?
     var sImg:String?
     var sDate:Date?
+    var miImg:UIImage?
     
     func setMap(valores:[String:Any]) {
         sFirst = valores["first"] as? String
@@ -29,6 +30,28 @@ class Perfil: NSObject {
         sImg = valores["url_image"] as? String
         sDate = valores["date"] as? Date
         print("****************************", sImg)
+        if sImg != nil{
+            descargarImagen()
+        }
+    }
+    
+    func descargarImagen(){
+        
+        print("-------")
+        let imagenDes = DataHolder.sharedInstance.HMIMG[sImg!]
+        if imagenDes != nil{
+         //   imgMain?.image = imagenDes
+            miImg = imagenDes
+        }else{
+            let gsReference = DataHolder.sharedInstance.firStorage?.reference(forURL: sImg!)
+            gsReference?.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                if error != nil {
+                } else {
+                   self.miImg =  UIImage(data: data!)
+                    DataHolder.sharedInstance.HMIMG[self.sImg!] = self.miImg
+                }
+            }
+        }
     }
     
     func getMap() -> [String:Any]{

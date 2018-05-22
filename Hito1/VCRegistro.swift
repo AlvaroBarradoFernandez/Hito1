@@ -26,7 +26,7 @@ class VCRegistro: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         if (self.txtfPass?.text == self.txtfPasscon?.text){
             Auth.auth().createUser(withEmail: (txtfEmail?.text)!, password: (txtfPass?.text)!){(user, error) in
                 if user != nil{
-                    DataHolder.sharedInstance.firUser = user
+                    DataHolder.sharedInstance.firUser = user?.user
                     print("Las contraseñas coinciden")
                     self.performSegue(withIdentifier: "registrar", sender: self)
                 }

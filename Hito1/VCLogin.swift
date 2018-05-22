@@ -26,10 +26,9 @@ class VCLogin:  UIViewController, UIImagePickerControllerDelegate, UINavigationC
         print(txtfUsuario?.text)
         print(txtfContraseña?.text)
         Auth.auth().signIn(withEmail: (txtfUsuario?.text)!, password: (txtfContraseña?.text)!) { (user, error) in
-            if (user != nil){
-                DataHolder.sharedInstance.firUser = user
+            if (user != nil){DataHolder.sharedInstance.firUser = user?.user
                 let refPerfil =
-                    DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").document ((user?.uid)!)
+                    DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").document ((user?.user.uid)!)
                 refPerfil?.getDocument{(document, error) in if document != nil{
                     DataHolder.sharedInstance.miPerfil.setMap(valores:(document?.data())!)
                     print(DataHolder.sharedInstance.miPerfil.sFirst!)

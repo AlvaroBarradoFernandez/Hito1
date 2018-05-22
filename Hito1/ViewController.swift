@@ -29,6 +29,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
         imagePicker.delegate = self
+        if DataHolder.sharedInstance.blConfg == true{
+            txtfUser?.text = DataHolder.sharedInstance.miPerfil.sFirst
+            txtfAge?.text = String(format: "%d", DataHolder.sharedInstance.miPerfil.iAge!)
+            txtfWeight?.text = String(format: "%f", DataHolder.sharedInstance.miPerfil.fWeight!)
+            txtfHeight?.text = String(format: "%f", DataHolder.sharedInstance.miPerfil.fHeight!)
+            txtDate?.date = DataHolder.sharedInstance.miPerfil.sDate!
+            imgView?.image = DataHolder.sharedInstance.miPerfil.miImg
+        }
     }
     
     func showAlert() {
@@ -52,6 +60,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         DataHolder.sharedInstance.miPerfil.fHeight = Float((txtfHeight?.text)!)
         DataHolder.sharedInstance.miPerfil.sDate = txtDate?.date
         let refPerfil = DataHolder.sharedInstance.firestoreDB?.collection("Perfiles").document((DataHolder.sharedInstance.firUser?.uid)!).setData(DataHolder.sharedInstance.miPerfil.getMap())
+        
     }
 
     @IBAction func accionBotonGaleria(){
@@ -69,7 +78,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func accionVolver() {
         var sTransicionV:String = "PerfilALogin"
         if DataHolder.sharedInstance.blConfg == true{
-            sTransicionV = "PerfilAConfig"
+            sTransicionV = "AceptaAConfiguracion"
         }
         self.performSegue(withIdentifier: sTransicionV, sender: self)
     }
@@ -78,7 +87,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var sTransicionA:String = "PerfilALogin"
         
         if DataHolder.sharedInstance.blConfg == true{
-            sTransicionA = "PerfilAConfig"
+            sTransicionA = "AceptaAConfiguracion"
         }
         let ruta:String = String(format: "tutorial/%@/miimagen.jpg", (DataHolder.sharedInstance.firUser?.uid)!)
         let imagenRef = DataHolder.sharedInstance.firStorageRef?.child(ruta)
@@ -87,11 +96,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             guard let metadata = metadata else{
                 return 
             }
-            let downloadURL = metadata.path
-            DataHolder.sharedInstance.miPerfil.sImg = metadata.downloadURL()?.absoluteString
-            self.guardarPerfil()
-            //self.showAlert()
-            self.performSegue(withIdentifier: sTransicionA, sender: self)
+         
+            imagenRef?.downloadURL { (url, error) in
+                DataHolder.sharedInstance.miPerfil.sImg = url?.absoluteString
+                self.guardarPerfil()
+                //self.showAlert()
+                self.performSegue(withIdentifier: sTransicionA, sender: self)
+            }
+            
         }
     }
     
