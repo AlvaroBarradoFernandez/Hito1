@@ -1,10 +1,10 @@
 PODS:
-  - BoringSSL (10.0.2):
-    - BoringSSL/Implementation (= 10.0.2)
-    - BoringSSL/Interface (= 10.0.2)
-  - BoringSSL/Implementation (10.0.2):
-    - BoringSSL/Interface (= 10.0.2)
-  - BoringSSL/Interface (10.0.2)
+  - BoringSSL (10.0.3):
+    - BoringSSL/Implementation (= 10.0.3)
+    - BoringSSL/Interface (= 10.0.3)
+  - BoringSSL/Implementation (10.0.3):
+    - BoringSSL/Interface (= 10.0.3)
+  - BoringSSL/Interface (10.0.3)
   - Firebase/Auth (5.0.1):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.0)
@@ -75,12 +75,14 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.5.0)
+  - VACalendar (1.1.6)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
   - Firebase/Storage
+  - VACalendar
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -101,9 +103,10 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - VACalendar
 
 SPEC CHECKSUMS:
-  BoringSSL: 60dd24df4af296bf41d78e5841dbb95d75f88c0d
+  BoringSSL: c46efb47593135382bc0934196f16d2f726f5f36
   Firebase: d6861c2059d8c32d1e6dd8932e22ada346d90a3a
   FirebaseAnalytics: 19812b49fa5f283dd6b23edf8a14b5d477029ab8
   FirebaseAuth: acbeef02fe7c3a26624e309849f3fe30c84115af
@@ -120,7 +123,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  VACalendar: 3ff9948ac2269d443984bae3e5e1305ebf42f002
 
-PODFILE CHECKSUM: 731f199881f5028f6ccad8e8a302ffaffc7e01e3
+PODFILE CHECKSUM: 81732306d62d194b853473f7a559c43311bdb1f7
 
 COCOAPODS: 1.5.0

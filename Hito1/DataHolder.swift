@@ -21,6 +21,8 @@ class DataHolder: NSObject {
     var firUser:User?
     var blConfg:Bool = false
     
+
+    
     func initFireBase(){
         FirebaseApp.configure()
         firestoreDB = Firestore.firestore()

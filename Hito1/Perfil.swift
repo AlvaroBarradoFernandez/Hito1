@@ -9,6 +9,7 @@
 import UIKit
 
 class Perfil: NSObject {
+    var sTitulo:String?
     var sID:String?
     var sFirst:String?
     var iPass:String?
@@ -29,6 +30,7 @@ class Perfil: NSObject {
         fWeight = valores["weight"] as? Float
         sImg = valores["url_image"] as? String
         sDate = valores["date"] as? Date
+        
         print("****************************", sImg)
         if sImg != nil{
             descargarImagen()
@@ -64,6 +66,7 @@ class Perfil: NSObject {
         mapTemp["weight"] = fWeight
         mapTemp["url_image"] = sImg
         mapTemp["date"] = sDate
+        
         return mapTemp
     }
 }
