@@ -474,7 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Tg-NS-Kw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4635" y="-547"/>
+            <point key="canvasLocation" x="4804" y="-547"/>
         </scene>
         <!--Calendario-->
         <scene sceneID="piA-V6-ITJ">
@@ -927,89 +927,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1o-UU-lZs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-415" y="96"/>
-        </scene>
-        <!--Foro-->
-        <scene sceneID="ayM-43-8Fp">
-            <objects>
-                <viewController id="XvA-Vl-1LP" customClass="Foro" customModule="Hito1" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LfB-dC-ZkH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4yC-3T-sBJ">
-                                <rect key="frame" x="16" y="20" width="232" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxg-Rg-RHZ">
-                                <rect key="frame" x="282" y="20" width="60" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="n68-X4-HZE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Buscar"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cq2-MZ-Gnn">
-                                <rect key="frame" x="55" y="554" width="80" height="30"/>
-                                <state key="normal" title="Añadir Foro"/>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gxS-uH-5aQ">
-                                <rect key="frame" x="16" y="84" width="343" height="439"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celda" id="zDu-Aq-jbp" customClass="CeldaForo" customModule="Hito1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zDu-Aq-jbp" id="q6L-E8-jmd">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36K-0D-42J">
-                                                    <rect key="frame" x="15" y="11" width="313" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="36K-0D-42J" firstAttribute="centerX" secondItem="q6L-E8-jmd" secondAttribute="centerX" id="641-zE-w1C"/>
-                                                <constraint firstItem="36K-0D-42J" firstAttribute="leading" secondItem="q6L-E8-jmd" secondAttribute="leadingMargin" id="DsH-ui-7HZ"/>
-                                                <constraint firstItem="36K-0D-42J" firstAttribute="centerY" secondItem="q6L-E8-jmd" secondAttribute="centerY" id="eQg-AZ-e0G"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.85057855400000004" green="1" blue="0.5845559749" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <outlet property="Nombre" destination="36K-0D-42J" id="waT-l6-PbX"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.99970835449999995" green="0.8202103972" blue="0.95169907809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="4yC-3T-sBJ" firstAttribute="top" secondItem="MAP-Ho-7XV" secondAttribute="top" id="Gb3-WQ-Ldp"/>
-                            <constraint firstItem="nxg-Rg-RHZ" firstAttribute="leading" secondItem="4yC-3T-sBJ" secondAttribute="trailing" constant="34" id="MbN-q9-YzH"/>
-                            <constraint firstItem="gxS-uH-5aQ" firstAttribute="leading" secondItem="4yC-3T-sBJ" secondAttribute="leading" id="Mpp-9u-ic2"/>
-                            <constraint firstItem="4yC-3T-sBJ" firstAttribute="leading" secondItem="LfB-dC-ZkH" secondAttribute="leadingMargin" id="Ozs-Cb-6Cc"/>
-                            <constraint firstItem="4yC-3T-sBJ" firstAttribute="top" secondItem="nxg-Rg-RHZ" secondAttribute="top" id="RIN-n7-P4D"/>
-                            <constraint firstItem="Cq2-MZ-Gnn" firstAttribute="top" secondItem="gxS-uH-5aQ" secondAttribute="bottom" constant="31" id="bio-gb-IZw"/>
-                            <constraint firstItem="MAP-Ho-7XV" firstAttribute="trailing" secondItem="nxg-Rg-RHZ" secondAttribute="trailing" constant="33" id="drd-um-wQ8"/>
-                            <constraint firstItem="MAP-Ho-7XV" firstAttribute="bottom" secondItem="Cq2-MZ-Gnn" secondAttribute="bottom" constant="83" id="oBd-lg-d7l"/>
-                            <constraint firstItem="gxS-uH-5aQ" firstAttribute="top" secondItem="4yC-3T-sBJ" secondAttribute="bottom" constant="34" id="qjk-Fn-aYS"/>
-                            <constraint firstItem="gxS-uH-5aQ" firstAttribute="trailing" secondItem="LfB-dC-ZkH" secondAttribute="trailingMargin" id="ttj-xu-px1"/>
-                            <constraint firstItem="Cq2-MZ-Gnn" firstAttribute="leading" secondItem="MAP-Ho-7XV" secondAttribute="leading" constant="55" id="wj3-gF-xRY"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="MAP-Ho-7XV"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Foro" id="XYt-Nv-RXU"/>
-                    <connections>
-                        <outlet property="TablaForo" destination="gxS-uH-5aQ" id="GW2-UB-tRb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vkq-1E-zXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5188" y="-548"/>
         </scene>
     </scenes>
     <resources>

@@ -11,7 +11,6 @@
 		2A5B48E020B8438F003137AA /* VCCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B48DF20B8438F003137AA /* VCCalendarViewController.swift */; };
 		2A7E45CA20B7F33800863C13 /* Foro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E45C920B7F33800863C13 /* Foro.swift */; };
 		2A7E45D020B7F62000863C13 /* ArrayForos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E45CF20B7F62000863C13 /* ArrayForos.swift */; };
-		2A92D85E20C13C3800F70E6F /* CeldaForo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A92D85D20C13C3700F70E6F /* CeldaForo.swift */; };
 		2AA312B820751E8200C46165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA312B720751E8200C46165 /* AppDelegate.swift */; };
 		2AA312BA20751E8200C46165 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA312B920751E8200C46165 /* ViewController.swift */; };
 		2AA312BD20751E8200C46165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA312BB20751E8200C46165 /* Main.storyboard */; };
@@ -26,6 +25,7 @@
 		2AAAB82520A3036A00F02AF3 /* VCRegistro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB82420A3036A00F02AF3 /* VCRegistro.swift */; };
 		2AAAB82920A307DC00F02AF3 /* VCLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB82820A307DC00F02AF3 /* VCLogin.swift */; };
 		2AB25A0520AEE32600850E7C /* VCConfiguracion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB25A0420AEE32600850E7C /* VCConfiguracion.swift */; };
+		2AB66F0020C1401900B42E63 /* CeldaForo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66EFF20C1401900B42E63 /* CeldaForo.swift */; };
 		2AF35EAA207CDD6200695453 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */; };
 		2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35EAB207CE1B000695453 /* DataHolder.swift */; };
 		2AF35EAE207F88DA00695453 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35EAD207F88DA00695453 /* Perfil.swift */; };
@@ -40,7 +40,6 @@
 		2A5B48DF20B8438F003137AA /* VCCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCalendarViewController.swift; sourceTree = "<group>"; };
 		2A7E45C920B7F33800863C13 /* Foro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foro.swift; sourceTree = "<group>"; };
 		2A7E45CF20B7F62000863C13 /* ArrayForos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayForos.swift; sourceTree = "<group>"; };
-		2A92D85D20C13C3700F70E6F /* CeldaForo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaForo.swift; path = ../../../../Desktop/CeldaForo.swift; sourceTree = "<group>"; };
 		2AA312B420751E8200C46165 /* Hito1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hito1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA312B720751E8200C46165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA312B920751E8200C46165 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		2AAAB82420A3036A00F02AF3 /* VCRegistro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegistro.swift; sourceTree = "<group>"; };
 		2AAAB82820A307DC00F02AF3 /* VCLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLogin.swift; sourceTree = "<group>"; };
 		2AB25A0420AEE32600850E7C /* VCConfiguracion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCConfiguracion.swift; sourceTree = "<group>"; };
+		2AB66EFF20C1401900B42E63 /* CeldaForo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaForo.swift; path = ../../../../Desktop/PerPill/Hito1C/Hito1/Hito1/CeldaForo.swift; sourceTree = "<group>"; };
 		2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AF35EAB207CE1B000695453 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		2AF35EAD207F88DA00695453 /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
@@ -114,9 +114,9 @@
 				2AAAB81A2088795500F02AF3 /* VCMap.swift */,
 				2AAAB81E208F385A00F02AF3 /* ViewControllerCollection.swift */,
 				2AAAB820208F53EA00F02AF3 /* micelda2CollectionViewCell.swift */,
+				2AB66EFF20C1401900B42E63 /* CeldaForo.swift */,
 				2AAAB82420A3036A00F02AF3 /* VCRegistro.swift */,
 				2AAAB82820A307DC00F02AF3 /* VCLogin.swift */,
-				2A92D85D20C13C3700F70E6F /* CeldaForo.swift */,
 				2A7E45C920B7F33800863C13 /* Foro.swift */,
 				2A7E45CF20B7F62000863C13 /* ArrayForos.swift */,
 				2A3E6BC020B86B2D00E61E4F /* ForoNuevo.swift */,
@@ -281,7 +281,7 @@
 				2AFB34FD20AEFF1F00F16580 /* VCRegistrar.swift in Sources */,
 				2AAAB82920A307DC00F02AF3 /* VCLogin.swift in Sources */,
 				2AAAB81F208F385A00F02AF3 /* ViewControllerCollection.swift in Sources */,
-				2A92D85E20C13C3800F70E6F /* CeldaForo.swift in Sources */,
+				2AB66F0020C1401900B42E63 /* CeldaForo.swift in Sources */,
 				2AF35EAE207F88DA00695453 /* Perfil.swift in Sources */,
 				2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */,
 				2A7E45D020B7F62000863C13 /* ArrayForos.swift in Sources */,
