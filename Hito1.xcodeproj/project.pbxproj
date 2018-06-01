@@ -8,13 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2A3E6BC120B86B2E00E61E4F /* ForoNuevo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E6BC020B86B2D00E61E4F /* ForoNuevo.swift */; };
-		2A3E6BC320BD399900E61E4F /* ForoDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E6BC220BD399900E61E4F /* ForoDetalle.swift */; };
 		2A5B48E020B8438F003137AA /* VCCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B48DF20B8438F003137AA /* VCCalendarViewController.swift */; };
 		2A7E45CA20B7F33800863C13 /* Foro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E45C920B7F33800863C13 /* Foro.swift */; };
-		2A7E45CC20B7F3AA00863C13 /* CeldaForo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E45CB20B7F3AA00863C13 /* CeldaForo.swift */; };
 		2A7E45D020B7F62000863C13 /* ArrayForos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E45CF20B7F62000863C13 /* ArrayForos.swift */; };
-		2A7E45D220B8158000863C13 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E45D120B8158000863C13 /* MonthView.swift */; };
-		2A7E45D420B81E0400863C13 /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E45D320B81E0400863C13 /* WeekdaysView.swift */; };
+		2A92D85E20C13C3800F70E6F /* CeldaForo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A92D85D20C13C3700F70E6F /* CeldaForo.swift */; };
 		2AA312B820751E8200C46165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA312B720751E8200C46165 /* AppDelegate.swift */; };
 		2AA312BA20751E8200C46165 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA312B920751E8200C46165 /* ViewController.swift */; };
 		2AA312BD20751E8200C46165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA312BB20751E8200C46165 /* Main.storyboard */; };
@@ -28,7 +25,6 @@
 		2AAAB821208F53EA00F02AF3 /* micelda2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB820208F53EA00F02AF3 /* micelda2CollectionViewCell.swift */; };
 		2AAAB82520A3036A00F02AF3 /* VCRegistro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB82420A3036A00F02AF3 /* VCRegistro.swift */; };
 		2AAAB82920A307DC00F02AF3 /* VCLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAB82820A307DC00F02AF3 /* VCLogin.swift */; };
-		2AB25A0320AED1F300850E7C /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB25A0220AED1F300850E7C /* Calendar.swift */; };
 		2AB25A0520AEE32600850E7C /* VCConfiguracion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB25A0420AEE32600850E7C /* VCConfiguracion.swift */; };
 		2AF35EAA207CDD6200695453 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */; };
 		2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35EAB207CE1B000695453 /* DataHolder.swift */; };
@@ -41,13 +37,10 @@
 		00699A5A0D82EBE80ACD9D85 /* Pods-Hito1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hito1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hito1/Pods-Hito1.release.xcconfig"; sourceTree = "<group>"; };
 		27324900B0BE3CB5AAE0B826 /* Pods_Hito1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hito1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A3E6BC020B86B2D00E61E4F /* ForoNuevo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForoNuevo.swift; sourceTree = "<group>"; };
-		2A3E6BC220BD399900E61E4F /* ForoDetalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForoDetalle.swift; sourceTree = "<group>"; };
 		2A5B48DF20B8438F003137AA /* VCCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCalendarViewController.swift; sourceTree = "<group>"; };
 		2A7E45C920B7F33800863C13 /* Foro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foro.swift; sourceTree = "<group>"; };
-		2A7E45CB20B7F3AA00863C13 /* CeldaForo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaForo.swift; sourceTree = "<group>"; };
 		2A7E45CF20B7F62000863C13 /* ArrayForos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayForos.swift; sourceTree = "<group>"; };
-		2A7E45D120B8158000863C13 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
-		2A7E45D320B81E0400863C13 /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
+		2A92D85D20C13C3700F70E6F /* CeldaForo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaForo.swift; path = ../../../../Desktop/CeldaForo.swift; sourceTree = "<group>"; };
 		2AA312B420751E8200C46165 /* Hito1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hito1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA312B720751E8200C46165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA312B920751E8200C46165 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +56,6 @@
 		2AAAB820208F53EA00F02AF3 /* micelda2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = micelda2CollectionViewCell.swift; sourceTree = "<group>"; };
 		2AAAB82420A3036A00F02AF3 /* VCRegistro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegistro.swift; sourceTree = "<group>"; };
 		2AAAB82820A307DC00F02AF3 /* VCLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLogin.swift; sourceTree = "<group>"; };
-		2AB25A0220AED1F300850E7C /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		2AB25A0420AEE32600850E7C /* VCConfiguracion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCConfiguracion.swift; sourceTree = "<group>"; };
 		2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AF35EAB207CE1B000695453 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
@@ -107,12 +99,9 @@
 			children = (
 				2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */,
 				2AA312B720751E8200C46165 /* AppDelegate.swift */,
-				2A7E45D120B8158000863C13 /* MonthView.swift */,
 				2AA312B920751E8200C46165 /* ViewController.swift */,
-				2A7E45D320B81E0400863C13 /* WeekdaysView.swift */,
 				2AF35EAB207CE1B000695453 /* DataHolder.swift */,
 				2AFB34FC20AEFF1F00F16580 /* VCRegistrar.swift */,
-				2AB25A0220AED1F300850E7C /* Calendar.swift */,
 				2AA312BB20751E8200C46165 /* Main.storyboard */,
 				2AA312C120751E8200C46165 /* Assets.xcassets */,
 				2AA312C320751E8200C46165 /* LaunchScreen.storyboard */,
@@ -127,11 +116,10 @@
 				2AAAB820208F53EA00F02AF3 /* micelda2CollectionViewCell.swift */,
 				2AAAB82420A3036A00F02AF3 /* VCRegistro.swift */,
 				2AAAB82820A307DC00F02AF3 /* VCLogin.swift */,
+				2A92D85D20C13C3700F70E6F /* CeldaForo.swift */,
 				2A7E45C920B7F33800863C13 /* Foro.swift */,
-				2A7E45CB20B7F3AA00863C13 /* CeldaForo.swift */,
 				2A7E45CF20B7F62000863C13 /* ArrayForos.swift */,
 				2A3E6BC020B86B2D00E61E4F /* ForoNuevo.swift */,
-				2A3E6BC220BD399900E61E4F /* ForoDetalle.swift */,
 				2A5B48DF20B8438F003137AA /* VCCalendarViewController.swift */,
 			);
 			path = Hito1;
@@ -293,6 +281,7 @@
 				2AFB34FD20AEFF1F00F16580 /* VCRegistrar.swift in Sources */,
 				2AAAB82920A307DC00F02AF3 /* VCLogin.swift in Sources */,
 				2AAAB81F208F385A00F02AF3 /* ViewControllerCollection.swift in Sources */,
+				2A92D85E20C13C3800F70E6F /* CeldaForo.swift in Sources */,
 				2AF35EAE207F88DA00695453 /* Perfil.swift in Sources */,
 				2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */,
 				2A7E45D020B7F62000863C13 /* ArrayForos.swift in Sources */,
@@ -300,16 +289,11 @@
 				2AA312D12076110700C46165 /* micelda1.swift in Sources */,
 				2AA312BA20751E8200C46165 /* ViewController.swift in Sources */,
 				2A3E6BC120B86B2E00E61E4F /* ForoNuevo.swift in Sources */,
-				2A7E45D220B8158000863C13 /* MonthView.swift in Sources */,
 				2AAAB821208F53EA00F02AF3 /* micelda2CollectionViewCell.swift in Sources */,
-				2A7E45D420B81E0400863C13 /* WeekdaysView.swift in Sources */,
 				2A7E45CA20B7F33800863C13 /* Foro.swift in Sources */,
-				2A3E6BC320BD399900E61E4F /* ForoDetalle.swift in Sources */,
-				2A7E45CC20B7F3AA00863C13 /* CeldaForo.swift in Sources */,
 				2AA312B820751E8200C46165 /* AppDelegate.swift in Sources */,
 				2AA312C020751E8200C46165 /* Hito1.xcdatamodeld in Sources */,
 				2AAAB82520A3036A00F02AF3 /* VCRegistro.swift in Sources */,
-				2AB25A0320AED1F300850E7C /* Calendar.swift in Sources */,
 				2A5B48E020B8438F003137AA /* VCCalendarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

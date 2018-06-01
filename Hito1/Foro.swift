@@ -12,6 +12,7 @@ import Firebase
 class Foro: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var TablaForo:UITableView?
     var arForos:[ArrayForos] = []
+//    var arMensaje:[ForoDetalle] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         DataHolder.sharedInstance.firestoreDB?.collection("Foros").addSnapshotListener() { (querySnapshot, err) in
@@ -34,6 +35,9 @@ class Foro: UIViewController, UITableViewDelegate, UITableViewDataSource {
         TablaForo?.dataSource=self
     }
     
+    
+    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()    }
     
@@ -55,8 +59,12 @@ class Foro: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+//        print(self.arMensaje[indexPath.row])
+        self.performSegue(withIdentifier: "tran1", sender: self)
     }
+    
+    
+
 
 }
 
